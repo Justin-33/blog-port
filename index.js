@@ -4,7 +4,7 @@ import {dirname} from 'path'
 import {join} from 'path'
 import pg from 'pg'
 import bodyParser from 'body-parser'
-import  bcrypt from 'bcrypt'
+import  bcrypt from 'bcryptjs'
 import passport from "passport";
 import { Strategy } from "passport-local";
 import GoogleStrategy from "passport-google-oauth2";
