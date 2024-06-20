@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).load(function() {
 
     $(".content-section h3").textillate({
         loop: true,
