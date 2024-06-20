@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+
+    }
+    /* Active link styles */
+    .navbar-nav > .active > a {
+      color: #fff !important; /* Text color for the active link */
+      background-color: #333 !important; /* Background color for the active link */
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      var path = window.location.pathname.split("/")[1].toLowerCase();
+      if (path === "") path = "home"; // Default to home if path is empty
+
+      $('.navbar-nav > li > a').each(function() {
+        var page = $(this).attr('href').split("/")[1].toLowerCase();
+        if (page === path) {
+          $(this).parent().addClass('active');
+        }
+      });
+
+      $('.navbar-nav > li > a').on('click', function() {
+        $('.navbar-nav > li').removeClass('active');
+        $(this).parent().addClass('active');
+      });
+    });
+  </script>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header navbar-nav">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Portfolio</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/About">About</a></li>
+          <li><a href="/blog-library">Blog</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if (!Authenticated) { %>
+          <li><a href="/Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="/Signup"><span class="glyphicon glyphicon-log-in"></span> Sign up</a></li>
+          <% } else  { %>
+              <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+</body>
+</html>

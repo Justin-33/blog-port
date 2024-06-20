@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create post</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/textillate/assets/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+
+</head>
+<body>
+<%- include("./partial/header")%>
+
+<div class="contain">
+    <div class="cover">
+        <h1>Hey Justin</h1>
+        <h4>Let's see what you have in mind today!</h4>
+    </div>
+    <div class="form-area">
+        <form action="/create-post" method="post">
+            <div class="form-group">
+                <label>Image Url:</label>
+                <input type="url" class="form-control" placeholder="Url:" name="image">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Author</label>
+                <input type="text" class="form-control" name="author" placeholder="Author">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Tittle</label>
+                <input type="text" class="form-control"  placeholder="Tittle" name="tittle">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Sub Tittle</label>
+                <input type="text" class="form-control"  placeholder="Sub tittle" name="subTittle">
+            </div>
+            <div class="form-group">
+                <label for="largeText">Enter your text here:</label><br>
+                <textarea id="largeText" name="largeText" class="large-text-input"></textarea><br>
+            </div>
+            <div class="buttons">
+                <button type="submit" id="submit" class="submit">Submit</button>
+            </div>
+        </form>
+
+        <script>
+            ClassicEditor
+                .create(document.querySelector('#largeText'),{
+                    height: '500px',
+
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+
+    </div>
+</div>
+</body>
+</html>

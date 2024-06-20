@@ -1,0 +1,152 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+.background-cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 45, 37, 0.813);
+    background-size: cover;
+    height: 100vh;
+    background-image: url("pictures/dak.jpeg");
+    h1{
+        font-size: 60px;
+        color: #dddddd;
+    }
+    h4{
+        color: #dddddd;
+    }
+}
+.background-section{
+    background-image: url("pictures/download.png");
+    color: #548686;
+    h1{
+        color: #548686;
+    }
+    h6{
+        color: #548686;
+        font-size: 25px;
+    }
+
+}
+
+
+.signup-container{
+    background-image: url("pictures/dak.jpeg");
+}
+
+.form-area{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    height: 100%;
+    margin-left: 20%;
+
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 20px;
+    border-color: #548686;
+    border-width: 1px;
+    width: 80%;
+}
+.submit{
+    height: 65px;
+    width: 385px;
+    background-color: #206262;
+    border-radius: 10px;
+    border-color: #548686;
+    font-size: 100%;
+    color: white;
+    font-weight: bold;
+}
+.buttons{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #254d4d;
+    border-radius: 5px;
+    font-size: 100%;
+    width: 385px;
+    height: 65px;
+
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: #dddddd;
+    a{
+        color: #dddddd;
+        font-size: 20%;
+    }
+}
+@media (max-width: 820px) {
+    .buttons {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*CREATE BLOG STYLE SECTION!!!  */
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 45, 37, 0.813);
+    background-size: cover;
+    height: 100vh;
+    background-image: url("pictures/home-bg.jpg");
+    h1{
+        font-size: 60px;
+        color: #dddddd;
+    }
+    h4{
+        color: #dddddd;
+    }
+}
+
+.ck-editor__editable{
+    height: 300px;
+
+}

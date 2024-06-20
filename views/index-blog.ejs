@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="public/textillate/assets/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<%- include("./partial/header")%>
+    <div class="blog-section">
+        <div class="intro-section">
+            <div class="content-section">
+                <h3>Welcome <%= currentUser.firstname%>_</h3>
+                <h1>Justin's Blog </h1>
+                <p>A collection of random musings.</p>
+            </div>
+        </div>
+            <div class="blogs-collections">
+                <!--just place-holder for the link-->
+                <div class="link-div">
+                    <% contents.forEach(content => { %>
+                        <a href="/blog/<%= content.id %>"><h2><%= content.tittle %></h2>
+                            <h4><%= content.subtittle %> </h4></a>
+                        <p>Posted by <span><%= content.author%></span> on <%=content.createdat%> </p>
+
+                    <% }) %>
+                </div>
+                    </div>
+        <% if (currentUser.id === 1 ){ %>
+            <div class="make-post">
+                <a href="/creat-post">CREATE POST</a>
+            </div>
+        <% } %>
+    </div>
+
+
+
+
+<%- include("./partial/footer")%>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="textillate/assets/jquery.lettering.js"></script>
+<script src="textillate/jquery.textillate.js"></script>
+<script src="blog.js"></script>
+</body>
+</html>

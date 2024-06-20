@@ -1,0 +1,84 @@
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.about-content{
+    display:flex ;
+    flex-direction: column;
+    margin-top:0;
+    background-color: rgba(178, 220, 220, 0.66);
+}
+
+.top-section{
+    background-image: url("pictures/ai.png");
+    background-size: cover;
+    flex: 0 0 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #d3dcc4;
+    h1{
+        font-size: 70px;
+    }
+
+    h6{
+        font-size: 20px;
+    }
+
+}
+.background-cover{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(12, 29, 24, 0.813);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    @media (max-width: 600px) {
+        h1{
+            font-size: 40px;
+
+        }
+        p{
+            font-family: "Oswald", sans-serif;
+            font-size: 15px;
+        }
+
+
+    }
+
+}
+
+.right-section{
+    flex: 1; /* Takes the remaining space */
+    background-color: rgb(193, 198, 175);
+}
+.about-me-content{
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+
+
+.background-cover {
+    h1, p{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    }
+
+}
+
