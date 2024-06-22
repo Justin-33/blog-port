@@ -4,7 +4,7 @@ import {dirname} from 'path'
 import {join} from 'path'
 import pg from 'pg'
 import bodyParser from 'body-parser'
-import  bcrypt from 'bcryptjs'
+import  bcrypt from 'bcrypt'
 import passport from "passport";
 import { Strategy } from "passport-local";
 import GoogleStrategy from "passport-google-oauth2";
@@ -53,8 +53,11 @@ const db = new pg.Client({
 });
 
 
-db.connect()
 
+
+db.connect()
+.then(() => console.log('Connected to the database'))
+    .catch(err => console.error('Connection error', err.stack));
 
 
 
@@ -248,7 +251,7 @@ passport.use( 'local', new Strategy(
 passport.use('google', new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.SECRETKEY,
-    callbackURL:process.env.CALLBACKURL,
+    callbackURL: "http://localhost:3000/auth/google/blog-library",
 }, async (accessToken, refreshToken, profile, cb) => {
     try{
         const result = await db.query("SELECT * FROM users WHERE email = $1", [profile.email])
