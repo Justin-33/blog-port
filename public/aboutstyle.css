@@ -13,7 +13,16 @@ body{
     display:flex ;
     flex-direction: column;
     margin-top:0;
-    background-color: rgba(178, 220, 220, 0.66);
+    background-color: white;
+    p{
+        font: bold;
+    }
+}
+@media (max-width: 600px) {
+ 
+    .about-content p {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
 }
 
 .top-section{
@@ -54,6 +63,18 @@ body{
 
     }
 
+}
+
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .top-section  {
+        height: 60vh; /* Adjusted height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .background-cover  {
+        height: 60vh; /* Adjusted height for smaller screens */
+    }
 }
 
 .right-section{

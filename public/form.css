@@ -24,7 +24,16 @@
     h4{
         color: #dddddd;
     }
+
 }
+
+
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .background-cover  {
+        height: 60vh; /* Adjusted height for smaller screens */
+    }
+}
+
 .background-section{
     background-image: url("pictures/download.png");
     color: #548686;
@@ -49,8 +58,10 @@
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
     height: 100%;
-    margin-left: 20%;
+
 
 }
 
@@ -67,7 +78,7 @@
 }
 .submit{
     height: 65px;
-    width: 385px;
+    width: 98%;
     background-color: #206262;
     border-radius: 10px;
     border-color: #548686;
@@ -90,7 +101,7 @@
     background-color: #254d4d;
     border-radius: 5px;
     font-size: 100%;
-    width: 385px;
+    width: 98%;
     height: 65px;
 
 }

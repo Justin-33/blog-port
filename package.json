@@ -5,6 +5,7 @@
     "body-parser": "^1.20.2",
     "bootstrap-icons": "^1.11.3",
     "connect-flash": "^0.1.1",
+    "connect-redis": "^7.1.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-flash": "^0.0.2",
@@ -12,6 +13,7 @@
     "jquery": "^3.7.1",
     "passport-google-oauth2": "^0.2.0",
     "pg": "^8.11.5",
+    "redis": "^4.6.14",
     "render": "^0.1.4",
     "splittext": "^2.0.0"
   },

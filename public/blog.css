@@ -11,6 +11,13 @@
     background-size: cover;
     height: 100vh;
 }
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .intro-section  {
+        height: 60vh; /* Adjusted height for smaller screens */
+    }
+}
+
+
 
 .background-cover{
     background-image: url("./pictures/landscape.jpeg");
