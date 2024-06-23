@@ -18,8 +18,7 @@ body{
         font: bold;
     }
 }
-@media (max-width: 600px) {
- 
+@media (max-width: 600px) { 
     .about-content p {
         padding: 8px; /* Adjust padding for smaller screens */
     }
