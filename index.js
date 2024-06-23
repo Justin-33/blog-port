@@ -45,19 +45,17 @@ app.use(passport.session());
 
 
 const db = new pg.Client({
-    user: process.env.USERI,
-    host:  process.env.HOST,
-    database:  process.env.DATABASE,
-    password:  process.env.PASSWORD,
-    port:  process.env.DB_PORT,
+    connectionString:process.env.EXT_DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false // This will allow self-signed certificates (not recommended for production)
+      }
 });
-
-
-
-
 db.connect()
-.then(() => console.log('Connected to the database'))
-    .catch(err => console.error('Connection error', err.stack));
+    .then(() => {
+        console.log('Connected to the database');
+
+    })
+
 
 
 
